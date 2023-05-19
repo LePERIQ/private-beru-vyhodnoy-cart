@@ -24,9 +24,9 @@ export const shopDataSlice = createSlice({
 
 export const { setShopData } = shopDataSlice.actions;
 
-export const getShopData = (): AppThunk => (dispatch) => {
+export const getShopData = (id : number): AppThunk => (dispatch) => {
   // axios<BeerShopDataType>(`http://localhost:3001/api/beerShopData/${id}`)
-  axios<BeerShopDataType>(`http://localhost:3001/api/beerShopData/${14}`)
+  axios<BeerShopDataType>(`http://localhost:3001/api/beerShopData/${id}`)
     .then((res) => dispatch(setShopData(res.data)))
     .catch(console.log);
 };

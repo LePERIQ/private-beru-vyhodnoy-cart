@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import  shopDataReducer  from './beersSlice/beersSlice';
+import  switchStateReducer  from './toggleSwitchSlice/toggleSwitchSlice';
 // ...
 
 const store = configureStore({
   reducer: {
-    shopData: shopDataReducer
+    shopData: shopDataReducer,
+    switchState : switchStateReducer
   },
 })
 
